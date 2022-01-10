@@ -1,17 +1,21 @@
-% The ; denotes we are going back to a new row.
-A = [1, 2, 3; 4, 5, 6; 7, 8, 9; 10, 11, 12]
+% Initialize matrix A and B 
+A = [1, 2, 4; 5, 3, 2]
+B = [1, 3, 4; 1, 1, 1]
 
-% Initialize a vector 
-v = [1;2;3] 
+% Initialize constant s 
+s = 2
 
-% Get the dimension of the matrix A where m = rows and n = columns
-[m,n] = size(A)
+% See how element-wise addition works
+add_AB = A + B 
 
-% You could also store it this way
-dim_A = size(A)
+% See how element-wise subtraction works
+sub_AB = A - B
 
-% Get the dimension of the vector v 
-dim_v = size(v)
+% See how scalar multiplication works
+mult_As = A * s
 
-% Now let's index into the 2nd row 3rd column of matrix A
-A_23 = A(2,3)
+% Divide A by s
+div_As = A / s
+
+% What happens if we have a Matrix + scalar?
+add_As = A + s
