@@ -1,22 +1,12 @@
-% Initialize random matrices A and B 
-A = [1,2;4,5]
-B = [1,1;0,2]
+% Initialize matrix A 
+A = [1,2,0;0,5,6;7,0,9]
 
-% Initialize a 2 by 2 identity matrix
-I = eye(2)
+% Transpose A 
+A_trans = A' 
 
-% The above notation is the same as I = [1,0;0,1]
+% Take the inverse of A 
+A_inv = inv(A)
 
-% What happens when we multiply I*A ? 
-IA = I*A 
+% What is A^(-1)*A? 
+A_invA = A*inv(A)
 
-% How about A*I ? 
-AI = A*I 
-
-% Compute A*B 
-AB = A*B 
-
-% Is it equal to B*A? 
-BA = B*A 
-
-% Note that IA = AI but AB != BA
